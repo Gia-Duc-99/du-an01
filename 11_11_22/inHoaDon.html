@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylehd.css'>
+</head>
+<body>
+    <form id="form1" action="">
+        <section>
+            <h2>Thông tin khách hàng</h2>
+            <section>
+            <p class="a">Họ tên khách hàng:</p><input id="tenKH" type="text"><br>
+            <p class="a">Số điện thoại:</p><input id="sdt" type="number"><br>
+            <p class="a">Địa chỉ:</p><textarea id="diaChi" name="" id="" cols="30" rows="5"></textarea><br>
+            <p class="a">Tên sản phẩm:</p><input id="tenSp" type="text"><br>
+            <p class="a">Hãng sản xuất:</p>
+                <input type="radio" name="hang">Apple
+                <input type="radio" name="hang">Samsung 
+                <input type="radio" name="hang">Oppo 
+                <input type="radio" name="hang">Xiaomi<br>
+            <p class="a">Đơn giá:</p><input id="gia" type="number"><br>
+            <p class="a">Số lượng:</p><input id="soLuong" type="number"><br>
+            <input id="print" type="button" value="In hóa đơn" onclick="inHoaDon()">
+            </section>
+        </section>
+    </form>
+    <section id="form2">
+        <div id="anh"><img src="image/gd1.jpg" alt=""></div>
+        <div id="text">
+            <div><h1>GĐ COMPANY</h1></div>
+            <div>Chuyên cung cấp các giải pháp phần mềm</div>
+            <div>Địa chỉ: Lê Trọng Tấn, Hà Đông, Hà Nội</div>
+            <div>Điện thoại Hotline: 0986038160</div>
+            <div><h1>HÓA ĐƠN BÁN LẺ</h1></div>
+        </div>
+        <section id="content">
+            <h3>Họ tên khách hàng: <span id="name"></span></h3>
+            <h3>Địa chỉ: <span id="add"></span></h3>
+            <h3>Số điện thoại: <span id="phone"></span></h3>
+            <table>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên hàng hóa và quy cách sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Giảm giá</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><p id="sp2"></p></td>
+                    <td><p id="sl2"></p></td>
+                    <td><p id="dg2"></p></td>
+                    <td><p id="gg2"></p></td>
+                    <td><p id="tt2"></p></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><p id="sp3"></p></td>
+                    <td><p id="sl3"></p></td>
+                    <td><p id="dg3"></p></td>
+                    <td><p id="gg3"></p></td>
+                    <td><p id="tt3"></p></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><p id="sp4"></p></td>
+                    <td><p id="sl4"></p></td>
+                    <td><p id="dg4"></p></td>
+                    <td><p id="gg4"></p></td>
+                    <td><p id="tt4"></p></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    <script>
+        function inHoaDon(){
+            document.getElementById("form2").style.display = 'block';
+            var tenKH = document.getElementById('tenKH').value;
+            var sdt = document.getElementById('sdt').value;
+            var diaChi = document.getElementById('diaChi').value;
+            var tenSp = document.getElementById('tenSp').value;
+            var hangSx = document.querySelector('input[name="hang"]:checked');
+            var gia = document.getElementById('gia').value;
+            var sl = document.getElementById('soLuong').value;
+            var sp1 = document.getElementById('sp1');
+            var sl1 = document.getElementById('sl1');
+            var dg1 = document.getElementById('dg1');
+            var gg1 = document.getElementById('gg1');
+            var tt1 = document.getElementById('tt1');
+            var name = document.getElementById('name');
+            var add = document.getElementById('add');
+            var phone = document.getElementById('phone');
+            sp1.innerHTML = hangSx + " " + tenSp;
+            sl1.innerHTML = sl;
+            dg1.innerHTML = gia + "đ";
+            gg1.innerHTML = gg1.value *100 +"%";
+            tt1.innerHTML = sl * gia;
+            name.innerHTML = tenKH;
+            add.innerHTML = diaChi;
+            phone.innerHTML = sdt;
+        }
+    </script>
+</body>
+</html>

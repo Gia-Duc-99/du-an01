@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        #image{
+            width: 250px;
+            height: 300px;
+            display: none;
+        }
+        #showClock{
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="x = setTimeout(show, 1000)">Click</button>
+    <button onclick="clearTimeout(x)">Clear</button>
+    <hr><hr>
+    <button onclick="y = setInterval(interval,2000)">Nhấn chuột</button>
+    <button onclick="clearInterval(y)">Hủy</button>
+    <div id="showClock"></div>
+
+    <div id="anh"></div>
+    <script>
+        function show(){
+        //   document.write('<img id="image" src="image/gd1.jpg" alt="">');
+            document.getElementById('anh').innerHTML = '<img src="image/gd1.jpg" alt="">';
+        }
+        function interval(){
+            alert("Warning!!!!!");
+        }
+        function showTime(){
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var tg = "AM";
+            if(hour == 0){
+                hour = 12;
+            }
+            if(hour > 12){
+                hour = hour - 12;
+                tg="PM";
+            }
+            hour = hour < 10 ? "0" + hour : hour;
+            minute = minute < 10 ? "0" + minute : minute;
+            second = second < 10 ? "0" + second : second;
+            var time = hour + ":" + minute + ":" + second + tg;
+            document.getElementById("showClock").innerHTML = time;
+            setTimeout(showTime,1);
+        }
+        showTime();
+    </script>
+</body>
+</html>

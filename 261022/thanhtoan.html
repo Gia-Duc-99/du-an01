@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style_tt.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Thanh toán</h1>
+    <table>
+        <tr class="b">
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Remove</th>
+        </tr>
+        <tr>
+            <td id="row1"><img class="a" src="slide/vi-vn-apple-macbook-pro-2020-m1-myd82saa-1a.jpg" alt="" align="middle"><span>Laptop Apple Macbook Pro M1 2020 8GB/256GB (MYD82SA/A)</span></td>
+            <td class="c"> <input class="minus is-form" type="button" value="-">
+                <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="">
+                <input class="plus is-form" type="button" value="+">
+            </td>
+            <td class="c">32.190.000đ</td>
+            <td class="c">32.190.000đ</td>
+            <td class="c"><button class="btn"><i class="fa fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td id="total" colspan="5"><h2>Total: 32.190.000đ</h2></td>
+        </tr>
+    </table>
+    <section id="part2">
+        <section id="ttcn">
+            <div><b class="e">1.Thông tin cá nhân</b></div>
+            <div><h5>Họ tên</h5><input class="d" type="text" placeholder="Nhập tên"></div>
+            <div><h5>Địa chỉ</h5><input class="d" type="text" placeholder="Nhập địa chỉ"></div>
+            <div><h5>Email</h5><input class="d" type="text" placeholder="Nhập Email"></div>
+            <div><h5>Địa chỉ</h5><input class="d" type="text" placeholder="Nhập Địa chỉ"></div>
+            <div><h5>Thành phố</h5><input class="d" type="text" placeholder="Nhập Thành phố"></div>
+            <div><h5>Quốc gia</h5><input class="d" type="text" placeholder="Nhập Quốc gia"></div>
+            <div><h5>Zip code</h5><input class="d" type="text" placeholder="Nhập Zip code"></div>
+        </section>
+        <section id="pttt">
+            <div><b class="e">2.Phương thức thanh toán</b></div>
+            <div class="g">
+                <input type="radio" name="fav_languge" value="0">
+                <label for="fav_languge"><b>Chuyển Khoản Ngân Hàng Commonwealth (Không Mất Phí Thanh Toán)</b></label><br>
+                <span class="f">Thông tin người nhận:</span>
+                <ol class="f">
+                    <li><span>Name: Nguyễn Văn A</span></li>
+                    <li><span>BSB: 061-123</span></li>
+                    <li><span>Account Number: 01-36-1456</span></li>
+                    <li><span>Phone Number: 0123456789</span></li>
+                </ol>
+            </div>
+            <div class="g">
+                <input type="radio" id="tt2" name="fav_languge" value="0">
+                <label for="fav_languge"><b>Thanh toán Onecom: Thanh toán bằng thẻ Visa hoặc Master card (Phí thanh toán 0.29$)</b></label>
+            </div>
+            <div class="g">
+                <input type="radio" id="tt3" name="fav_languge" value="0">
+                <label for="fav_languge"><b>Thanh toán Paypal (Phí thanh toán 0.29$)</b></label></label>
+            </div>
+            <div class="g">
+                <input type="radio" id="tt4" name="fav_languge" value="0">
+                <label for="fav_languge"><b>Đổi thẻ</b></label>
+            </div>
+            <div class="g">
+                <h4>Sale Currency</h4>
+                <select name="" id="sale"></select>
+            </div>
+        </section>
+    </section>
+    <section>
+        <div id="end">
+            <button class="h" type="submit"><a href="http://">Mua thêm</a></button>
+            <button class="h" type="submit"><a href="http://">Thanh toán</a></button>
+        </div>
+    </section>
+</body>
+</html>

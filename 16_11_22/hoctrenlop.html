@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #test{
+            width: 130px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="an">test</p>
+    <button id="bt1">Ẩn test</button><hr>
+    <p id="test">Di chuột vào đây</p>
+    <p id="text">Xáo gà Thanh Chương được chế biến từ các gia vị dân dã nhưng lại tạo nên hương vị đậm đà, tinh tế, ngọt thơm riêng.
+        Xáo gà Thanh Chương là món ngon nổi tiếng, có trong thực đơn đãi khách của nhiều gia đình xứ Nghệ. Điểm đặc biệt ở khâu chế biến của món này khác với các vùng miền khác là cách dùng các gia vị "mộc", nguyên sơ và dân dã nhất để nêm nếm như muối hạt, lá chanh, nghệ tươi giã nhưng lại tạo nên hương vị đậm đà, tinh tế, ngọt thơm rất riêng. Món xáo gà không sử dụng nước mắm vì sẽ dậy mùi, làm mất hương vị đặc trưng của thịt gà. Ngoài ra, món ăn gây thương nhớ khi chế biến thêm phần mọc từ xương gà bằm nhuyễn, giữ sự tế nhị, tinh tế cho thực khách khi dùng bữa mà không phải xé, gặm lóc thịt như nhiều món hấp, luộc khác.</p>
+    <button id="nhan">click</button>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("#an").hide();
+            });
+            $("#test").mouseenter(function(){
+                alert("123");
+            });
+            // $("#nhan").click(function(){
+            //     $("#text").toggle(4000);
+            // });
+            $("#nhan").click(function(){
+                $("#text").slideToggle(4000);
+            });
+        });
+    </script>
+</body>
+</html>

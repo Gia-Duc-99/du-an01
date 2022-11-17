@@ -1,0 +1,49 @@
+#form1{
+    width: 40%;
+    height: 500px;
+    border: solid 1px;
+    float: left;
+}
+#form2{
+    width: 50%;
+    height: 700px;
+    border: solid 1px;
+    float: right;
+    display: none;
+}
+img{
+    width: 200px;
+    height: 250px;
+}
+h2{
+    padding-left: 130px;
+}
+.a{
+    width: 200px;
+    display: inline-block;
+}
+.b{
+    display: inline-block;
+}
+#print{
+    margin-left: 200px;
+}
+#anh{
+    display: inline-block;
+    width: 300px;
+    float: left;
+}
+#text{
+    width: 300px;
+    height: 250px;
+    display: inline-block;
+    margin-left: 40px;
+}
+h1{
+    font-size: 30px;
+}
+table, tr, th, td{
+    border: solid 1px;
+    border-collapse: collapse;
+}
+

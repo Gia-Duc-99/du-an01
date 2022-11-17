@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        span{
+            color: red;
+        }
+        p{
+            width: 140px;
+            display: inline-block;
+        }
+        input{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!--<input id="soa" type="number"><hr>
+    <input id="sob" type="number"><hr>
+    <input type="submit" value="Tổng" onclick="show()">
+    <h2>Tổng hai số là: <span id="ketqua"></span></h2><hr>
+    -->
+    <form action="#" onsubmit="validate()">
+        <p>Username:</p><input id="user" type="text"><span id="e_user"></span><br>
+        <p>Password:</p><input type="password" id="pass"><span id="e_pass"></span><br>
+        <p>Retype Password:</p><input type="password" id="rpass"><span id="r_pass"></span><br>
+        <p>Phone:</p><input type="text" id="phone"><span id="e_phone"></span><br>
+        <input type="submit" value="Đăng nhập" onclick="">
+    </form>
+    <script>
+        /*function show() {
+            let soa = parseFloat(document.getElementById("soa").value);
+            let sob = parseFloat(document.getElementById("sob").value);
+            let tong = soa + sob;
+            return document.getElementById("ketqua").innerHTML= tong;
+        }
+        */
+        function validate() {
+            let user = document.getElementById("user").value
+            let pass = document.getElementById("pass").value
+            let rpass = document.getElementById("rpass").value
+            let phone = document.getElementById("phone").value
+            let text
+            if(user == "" || pass == null){
+                text = " User không được để trống!!";
+            }else{
+                text = "";
+            }
+            document.getElementById("e_user").innerHTML = text;
+            if(isNaN(phone)){
+                document.getElementById("e_phone").innerHTML = " Số điện thoại phải là số";
+            }
+            else if(phone.length < 10 || phone.length >10){
+                document.getElementById("e_phone").innerHTML = " Số điện thoại phải là 10 số";
+            }
+            else{
+                document.getElementById("e_phone").innerHTML = "";
+            }
+            if(pass.length < 8 || pass ==null){
+                text = " Mật khẩu quá ngắn";
+            }else{
+                text = "";
+            }
+            document.getElementById("e_pass").innerHTML = text;
+            if(rpass != pass){
+                text = " Mật khẩu không trùng khớp";
+            }else{
+                text = "";
+            }
+            document.getElementById("r_pass").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
