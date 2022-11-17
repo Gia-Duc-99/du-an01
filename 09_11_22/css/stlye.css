@@ -1,0 +1,11 @@
+table{
+    border: 1px solid;
+    width: 70%;
+}
+.a{
+    background-color: greenyellow;
+    border-collapse: collapse;
+}
+#name{
+    width: 70%;
+}
